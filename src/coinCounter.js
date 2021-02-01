@@ -25,5 +25,7 @@ export default function coinCounter(x, quarters = 0, dimes = 0, nickels = 0, pen
     }
     return coinCounter(x, quarters, dimes, nickels, pennies);
   }
+  let result = [quarters, dimes, nickels, pennies];
   console.log(`Quarters: ${quarters}, Dimes: ${dimes}, Nickels: ${nickels}, Pennies: ${pennies}`);
+  return result;
 }
