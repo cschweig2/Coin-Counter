@@ -4,24 +4,20 @@ export default function coinCounter(x, quarters = 0, dimes = 0, nickels = 0, pen
   }
   if (x > 0) {
     if (x >= .25) {
-      quarters = x / .25;
-      quarters = Math.floor(quarters);
+      quarters = Math.floor(x/.25);
       x -= (quarters * .25);
       x = x.toFixed(2);
     } else if (x < .25 && x >= .10) {
-      dimes = x / .10;
-      dimes = Math.floor(dimes);
+      dimes = Math.floor(x/.10);
       x -= (dimes * .10);
       x = x.toFixed(2);
     } else if (x < .10 && x >= .05) {
-      nickels = x / .05;
-      nickels = Math.floor(nickels);
+      nickels = Math.floor(x/.05);
       x -= .05;
       x = x.toFixed(2);
     } else {
       pennies = x / .01;
       x = 0;
-      x = x.toFixed(2);
     }
     return coinCounter(x, quarters, dimes, nickels, pennies);
   }
